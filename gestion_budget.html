@@ -8,37 +8,38 @@
     <link rel="stylesheet" href="gestion_budget.css">
 </head>
 <body>
-  <h1>Gestion de Budget</h1>
-  <div class="container_1">
+  <section class="section_1">
     <div class="division_1">
-      <div class="part_1">
-        <div class="boite">
-          <h2>Budget</h2>
-          <p>120.000</p>
+      <h1>Gestion de Budget</h1>
+      <div class="header">
+        <div class="division_titre">
+          <div>
+            <h3>Budget</h3>
+            <span>120.000 CFA</span>
+          </div>
+        </div>
+        <div class="division_titre">
+          <div>
+            <h3>Depense</h3>
+            <span>100.000 CFA</span>
+          </div>
+        </div>
+        <div class="division_titre">
+          <div>
+            <h3>Solde</h3>
+            <span>20.000 CFA</span>
+            <p>budget - depense =Solde</p>
+          </div>
         </div>
       </div>
-      <div class="part_1">
-        <div class="boite">
-          <h2>Depense</h2>
-          <p>100.000</p>
+      <div class="table" style="padding-bottom: 50px;">
+        <div class="entete_table">
+          <h4>Liste depenses</h4>
+         <button type="submit">
+           Ajouter Depense
+          </button>
         </div>
-      </div>
-      <div class="part_1">
-        <div class="boite">
-          <h2>Solde</h2>
-          <p>20.000</p>
-        </div>
-        <span>budget - depence = Solde</span>
-      </div>
-    </div>
-    <div class="division_2">
-      <div class="div_table">
-        <div class="carre_table">
-          <h3>Liste des depenses</h3> 
-          <button name="submit" type="submit">
-            Ajoutr depense</button>
-        </div>
-         <table class="table_1">
+        <table>
           <tbody>
             <tr>
               <td>Titre</td>
@@ -61,73 +62,77 @@
             </tr>
           </tbody>
         </table>
+        <div class="table">
+          <div class="entete_table">
+            <h4>Liste depenses</h4>
+           <button type="submit">Ajouter Depense</button>
+          </div>
+          <table>
+            <tbody>
+              <tr>
+                <td>Titre</td>
+                <td>Montant</td>
+                <td>Action</td>
+              </tr>
+              <tr>
+                <td>Nourriture</td>
+                <td>2000</td>
+                <td>
+                  Modifier | Supprimer
+                </td>
+              </tr>
+              <tr>
+                <td>Cafe</td>
+                <td>100</td>
+                <td>
+                  Modifier | Supprimer
+                </td>
+              </tr>
+            </tbody>
+          </table>
       </div>
-      <div class="div_table">
-        <div class="carre_table">
-          <h3>Liste des revenus</h3> 
-          <a href="">
-           <button name="submit" type="submit">Ajoutr revenus</button>
-         </a>
+    </div>
+  </section>
+  <section class="section_2">
+    <div class="division_2">
+      <div class="div_1">
+        <h3>Ajouter depense</h3>
+        <div class="table">
+          <table id="tableau">
+            <tbody>
+              <tr>
+                <td>Titre</td>
+                <td>Cafe</td>
+              </tr>
+              <tr>
+                <td>Montant</td>
+                <td>100</td>
+              </tr>
+            </tbody>
+            
+          </table>
+          <button type="submit" id="valider">Valider</button>
         </div>
-        <table class="tableau">
+      </div>
+     <div class="div_1">
+      <div class="table">
+        <h3>Ajouter revenus</h3>
+        <table id="tableau">
           <tbody>
             <tr>
               <td>Titre</td>
-              <td>Montant</td>
-              <td>Action</td>
-            </tr>
-            <tr>
               <td>Salaire</td>
-              <td>300.000</td>
-              <td>
-                Modifier | Supprimer
-              </td>
             </tr>
             <tr>
-              <td>Bonus</td>
-              <td>100</td>
-              <td>
-                Modifier | Supprimer
-              </td>
+              <td>Montant</td>
+              <td>100.000</td>
             </tr>
           </tbody>
         </table>
+        <button type="submit" id="valider" style=" justify-content: center;">Valider</button>
       </div>
+     </div>
     </div>
-  </div>
-  <div class="container_2">
-    <div class="container_3">
-      <h3>Ajouter depenses</h3>
-      <table class="tableau">
-        <tbody id="corps">
-          <tr>
-            <td>Titre</td>
-            <td>cafe</td>
-          </tr>
-          <tr>
-            <td>Montant</td>
-            <td>100</td>
-          </tr>
-        </tbody>
-      </table>
-      <button type="submit">Valider</button>
-    </div>
-    <div class="container_4">
-      <h3>Ajouter revenus</h3>
-      <table class="tableau">
-        <tbody id="corps">
-          <tr>
-            <td>Titre</td>
-            <td>Salaire</td>
-          </tr>
-          <tr>
-            <td>Montant</td>
-            <td>100.000</td>
-          </tr>
-        </tbody>
-      </table>
-      <button type="submit">Valider</button>
-    </div>
-  </div>
+  </section>
 </body>
 </html>
