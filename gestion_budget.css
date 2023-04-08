@@ -25,6 +25,7 @@ justify-content: center;
 }
 h1{
     text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .header{
     display: flex;
@@ -58,14 +59,14 @@ p{
     padding: 20px;
 }
 
-button{
+/*button{
     margin: 15px; 
     background-color: rgb(152, 203, 187); 
     border: 1px solid; border-radius: 5px;
     margin-right: 10px;
     margin-left: 15px;
     cursor: alias;
-}
+}*/
 table{
     border: 1px solid black;
     border-collapse: collapse;
