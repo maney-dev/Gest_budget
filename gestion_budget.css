@@ -52,7 +52,7 @@ p{
 }
 .entete_table{
     display: flex;
-    grid-gap: 230px;
+    grid-gap: 265px;
     justify-content: center;
     padding-left: 22px;
     padding-right: 20px;
@@ -74,17 +74,19 @@ table{
     margin-left: 100px;
     justify-content: center;
     text-align: left;
-    width : 450px; /* Largeur du tableau */
+    width : 500px; /* Largeur du tableau */
     margin-left : auto;
     margin-right : auto;
 }
-tr td{
+tr td, tr{
     border: 1px solid black;
     padding: 5px;
     width: 120px;
     text-align: left;
 
-}
-tr{
+    
+    /*tr{
     padding: 35px;
+    }*/
+
 }
