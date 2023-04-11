@@ -15,13 +15,10 @@
     margin: 30px 500px 85px 10px;;
 }
 #tableau{
-    width: 225px;
+    width: 255px;
     margin: 10px 30px 5px 30px;
     height: 20px;
     padding-top: 20px;
-}
-#valider{
-justify-content: center;
 }
 h1{
     text-align: center;
@@ -29,10 +26,11 @@ h1{
 }
 .header{
     display: flex;
-    grid-gap: 90px;
+    grid-gap: 120px;
     justify-content: center;
     padding-top: 5px;
     padding-bottom: 10px;
+    
 }
 span{
     border: 1px solid;
@@ -41,32 +39,44 @@ span{
     padding-inline: 20px;
 }
 h3{
-    padding-top: 0px;
-    padding-bottom: 10px;
+    padding: 0px 30px 10px 0px;
+    text-align: center;
+    
+}
+h6{
+    padding: 5px 0px 10px 0;
     text-align: center;
 }
-p{
-    padding: 10px;
-    padding-right: 10px;
-    text-align: center;
+.formule{
+    padding-right: 50px;
 }
 .entete_table{
     display: flex;
-    grid-gap: 265px;
+    grid-gap: 385px;
     justify-content: center;
-    padding-left: 22px;
-    padding-right: 20px;
-    padding: 20px;
+    padding: 20px 5px 0px 5px;
+    
 }
 
-/*button{
-    margin: 15px; 
-    background-color: rgb(152, 203, 187); 
-    border: 1px solid; border-radius: 5px;
-    margin-right: 10px;
-    margin-left: 15px;
-    cursor: alias;
-}*/
+.btn_tete{
+    border: 1px solid rgb(241, 86, 86);
+    background-color: rgb(247, 203, 203);
+    justify-content: center;
+    border-radius: 8px; font-size: 12px;
+    width: 115px;
+    height: 30px;
+    margin-top: 15px;
+    margin-left: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.btn_pied{
+    border-radius: 8px;
+    color: rgb(14, 13, 13);
+    font-size: 15px;
+    width: 100px;
+    height: 30px; margin-top:60px;
+    margin-left: 153px; 
+}
 table{
     border: 1px solid black;
     border-collapse: collapse;
@@ -74,8 +84,7 @@ table{
     margin-left: 100px;
     justify-content: center;
     text-align: left;
-    width : 500px; /* Largeur du tableau */
-    margin-left : auto;
+    width : 610px; /* Largeur du tableau */
     margin-right : auto;
 }
 tr td, tr{
@@ -83,10 +92,4 @@ tr td, tr{
     padding: 5px;
     width: 120px;
     text-align: left;
-
-    
-    /*tr{
-    padding: 35px;
-    }*/
-
 }
