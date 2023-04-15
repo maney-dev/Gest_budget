@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion</title>
+    <link rel="stylesheet" href="gest_budget.css">
+    
+</head>
+<body>
+  <div class="container">
+    <div class="titre_container">
+      <h2>Gestion de Budget <span class="compteur"></span></h2>
+
+      <div class="header">
+        <div class="division_titre">
+          <div>
+            <h3>Budget</h3>
+            <span class="spans">120.000 CFA</span>
+          </div>
+        </div>
+        <div class="division_titre">
+          <div>
+            <h3>Depense</h3>
+            <span class="spans">100.000 CFA</span>
+          </div>
+        </div>
+        <div class="division_titre">
+          <div>
+            <h3>Solde</h3>
+            <span class="spans">20.000 CFA</span>
+            <h6>budget - depense = Solde</h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="tete_tableau">
+        <h4>Liste depense</h4>
+        <button id="ajouter_depense" type="button">Ajouter Depense</button>
+      </div>
+    </div>
+
+      <!--Le Model-->
+      <div class="modal" id="depense_modal">
+        <div class="model_content">
+          <span class="fermer">X</span>
+          <div class="form">
+            <form method="post">
+              <label for="name">Titre</label>
+              <input class="form_input" type="text" id="name" name="name" />
+              <label for="name">Montant</label>
+              <input class="form_input" type="number" id="number" name="number" />
+              <button type="submit" class="vld_btn">Valider</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    <div class="tableaux">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Titre</th>
+            <th>Montant</th>
+            <th>Action</th>
+          </tr>
+         <!--
+            <tbody>
+             <tr>
+               <td>Nourriture</td>
+               <td>2000</td>
+               <td><button class="mdf_btn">Modifier</button>|<button class="sup_btn">Supprimer</button></td>
+             </tr>
+             <tr>
+               <td>Cafe</td>
+               <td>100</td>
+               <td><button class="mdf_btn">Modifier</button>|<button class="sup_btn">Supprimer</button></td>
+             </tr>
+          </tbody>
+         -->
+        </thead>
+      </table>
+    </div>
+
+  </div>
+
+  <script src="gest_buget.js"></script>
+</body>
+</html>

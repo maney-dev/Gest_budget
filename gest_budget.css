@@ -1,0 +1,116 @@
+.container{
+    width: 960px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+h2{
+    text-align: center
+}
+.header{
+    display: flex;
+    grid-gap: 120px;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    
+}
+.spans{
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 15px;
+    padding-inline: 20px;
+}
+.tete_tableau{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#ajouter_depense{
+    background-color: #1C8D73;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+}
+.table{
+    border-collapse: collapse;
+    width: 100%;
+
+}
+.table td, .table th{
+    border: 1px solid grey;
+    padding: 8px;
+    text-align: left;
+}
+.table tr:hover{
+    background-color: rgb(233, 233, 233);
+}
+.table th{
+    background-color: #1C8D73;
+    color: white;
+    
+}
+.mdf_btn{
+    background-color: #CAD5E2;
+    border: 1px solid #CAD5E2;
+    padding: 8px 12px ;
+    cursor: pointer;
+}
+.sup_btn{
+    background-color: red;
+    border: 1px solid red;
+    color: white;
+    padding: 8px 12px ;
+    cursor: pointer;
+}
+/* Le fond du model*/
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+/* Le contenu de notre model*/
+.model_content{
+    background-color: #CAD5E2;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid grey;
+    width: 50%;
+}
+.fermer{
+    color: grey;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.fermer:hover, .fermer:focus{
+    color: black;
+    text-decoration: none;
+}
+.form_input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display:inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.vld_btn{
+    background-color: #1C8D73;
+    border: 1px solid #1C8D73;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 100%;
+}
