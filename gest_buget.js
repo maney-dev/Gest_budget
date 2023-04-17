@@ -4,7 +4,7 @@ let depenses =[
    
 ]
 
-const compteurElement = document.querySelector("compteur")
+const compteurElement = document.querySelector(".compteur")
 const table = document.querySelector(".table")
 const tbody = document.createElement("tbody")
 
@@ -16,49 +16,73 @@ function setCompteur(compteur){
 // remplissage de table
 function createTable(){
     for (let index = 0; index < 2; index++) {
-        let row = document.createElement("tr")
-
-        //creation de bouton de supprission
-        let buttonCell = document.createElement("td")
-        let buttonSup = document.createElement("button")
-        let buttonText = document.createTextNode('Supprimer')
-        buttonSup.setAttribute("class", "btn_sup")
-        buttonSup.appendChild(buttonText)
+       let row = document.createElement('tr')
+       // creation des boutons
+       let buttoncell = document.createElement("td")
+       let buttonModification = document.createElement("button")
+       let buttonSuppresion = document.createElement("button")
+       let buttonText = document.createTextNode("Modifier")
+       let buttonTexte = document.createTextNode("Supprimer")
+       buttonModification.setAttribute("class","mdf_btn")
+       buttonSuppresion.setAttribute("class", "sup_btn")
+       buttonModification.appendChild( buttonText)
+       buttonSuppresion.appendChild( buttonTexte)
 
         for (let element = 0; element < depenses.length; element++) {
-            //ajout des td
-            const cell = document.createElement("td")
-            const cellTexte = document.createTextNode(
-                Object.values(depenses[index])[element]
+
+            // Ajout des td
+            const cell = document.createElement('td')
+            const cellText = document.createTextNode(
+                Object.values(depenses [index])[element]
             )
-            buttonSup.setAttribute('motants', depenses[index].montant)
-            buttonCell.appendChild(buttonSup)
-            cell.appendChild(cellTexte)
-            row.appendChild(cell)   
-            row.appendChild(buttonCell)
-            row.setAttribute('titre',depenses[index].montant)
+            buttonSuppresion.setAttribute("titreDepenses", depenses[index].titre)
+            buttoncell.appendChild(buttonModification)
+            buttoncell.appendChild(buttonSuppresion)
+            cell.appendChild(cellText)
+            row.appendChild(cell)
+            row.appendChild(buttoncell)
+            row.setAttribute("id", depenses[index].titre)
         }
-        tbody.appendChild(row)
+       
+       tbody.appendChild(row)
     }
     table.appendChild(tbody)
-
     document.body.appendChild(table)
 }
-// Appel de la fonction createTable
+
 createTable()
-
-let buttonSup = document.querySelectorAll('.btn_sup')
-
-buttonSup.forEach(function(button){
+let buttonSuppresion = document.querySelectorAll(".sup_btn")
+buttonSuppresion.forEach(function(button){
     button.addEventListener('click', function(){
-        const montant = this.getAtribute(montants)
+       const titre = this.getAttribute("titreDepenses")
+       
+       let row =document.getElementById(titre)
+       row.parentNode.removeChild(row)
 
-        let row = document.getElementById(montant)
-        row.parentNode.removeChild(row)
+       // Enlever l'element supprimer
+       let filtreTitre = depenses.filter((titres) => titres.titre !== titre)
+       depenses = filtreTitre
+       setCompteur(depenses.length) 
     })
-
 })
 
+/*
+  let buttonModification = document.querySelectorAll(".mdf_btn")
+    buttonModification.forEach(function(button){
+    button.addEventListener('click', function(){
+       const montant = this.getAttribute("montantDepense")
+       
+       let row =document.getElementById(montant)
+       row.parentNode.removeChild(row)
+
+       // Enlever l'element supprimer
+       let filtreMontant = depenses.filter((montants) => montants.montant !== montant)
+       depenses = filtreMontant
+       setCompteur(depenses.length) 
+    })
+})
+
+*/
 // Le Modal
 let modal = document.getElementById('depense_modal')
 let modalButton = document.getElementById('ajouter_depense')
@@ -68,6 +92,83 @@ modalButton.onclick = function(){
     modal.style.display="block"
 }
 fermer.onclick = function(){
+    modal.style.display="none"
+}
+window.onclick = function(event){
+    if(event.target == modal){
+        modal.style.display="none"
+    }
+}
+
+// Ajouter une depense
+
+let vld_btn = document.querySelector('.vld_btn')
+vld_btn.onclick = function(event){
+    event.preventDefault()
+    console.log("cliquer")
+    const titre = document.getElementById("titre").value
+    const montant = document.getElementById("montant").value
+    if(!titre || !montant){
+        alert("Merci de bien vouloir tout remplir !")
+    return
+    }
+    const newDepense = {titre, montant}
+    depenses.push(newDepense)
+    setCompteur(depenses.length)
+
+    // Ajouter un tr
+    let row = document.createElement("tr")
+    let cell0 = row.insertCell(0)
+    let cell1 = row.insertCell(1)
+    const cell0Text = document.createTextNode(titre)
+    const cell1Text = document.createTextNode(montant)
+    cell0.appendChild(cell0Text)
+    cell1.appendChild(cell1Text)
+    row.appendChild(cell0)
+    row.appendChild(cell1)
+    
+    // creation des boutons
+    let buttoncell = document.createElement("td")
+    let buttonModification = document.createElement("button")
+    let buttonSuppresion = document.createElement("button")
+    let buttonText = document.createTextNode("Modifier")
+    let buttonTexte = document.createTextNode("Supprimer")
+    buttonModification.setAttribute("class","mdf_btn")
+    buttonSuppresion.setAttribute("class", "sup_btn")
+    
+    buttoncell.appendChild(buttonModification)
+
+    // reaction boutton
+    buttonSuppresion.setAttribute("titreDepenses", titre)
+    buttoncell.appendChild(buttonSuppresion)
+
+    // Ajouter un evenement 
+    buttonSuppresion.addEventListener('click',function(){
+        const titre = this.getAttribute("titreDepenses")
+       
+       let row =document.getElementById(titre)
+       row.parentNode.removeChild(row)
+
+       // Enlever l'element supprimer
+       let filtreTitre = depenses.filter((titres) => titres.titre !== titre)
+       depenses = filtreTitre
+       setCompteur(depenses.length) 
+    })
+
+    buttonModification.appendChild( buttonText)
+    buttonSuppresion.appendChild( buttonTexte)
+
+    row.appendChild(buttoncell)
+
+    row.setAttribute("id", titre)
+    row.setAttribute("id", montant)
+    tbody.appendChild(row)
+    table.appendChild(tbody)
+    document.body.appendChild(table)
+
+    //Vider les inputs
+    document.getElementById("titre").value = ''
+    document.getElementById("montant").value = ''
     modal.style.display="none"
 }
 
