@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion</title>
-    <link rel="stylesheet" href="gest_budget.css">
-    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion</title>
+  <link rel="stylesheet" href="gest_budget.css">
+
 </head>
+
 <body>
   <div class="container">
     <div class="titre_container">
@@ -41,21 +43,21 @@
       </div>
     </div>
 
-      <!--Le Model-->
-      <div class="modal" id="depense_modal">
-        <div class="model_content">
-          <span class="fermer">X</span>
-          <div class="form">
-            <form method="post">
-              <label for="name">Titre</label>
-              <input class="form_input" type="text" id="name" name="name" />
-              <label for="name">Montant</label>
-              <input class="form_input" type="number" id="number" name="number" />
-              <button type="submit" class="vld_btn">Valider</button>
-            </form>
-          </div>
+    <!--Le Model-->
+    <div class="modal" id="depense_modal">
+      <div class="model_content">
+        <span class="fermer">X</span>
+        <div class="form">
+          <form method="post">
+            <label for="name">Titre</label>
+            <input class="form_input" type="text" id="titre" name="titre" />
+            <label for="name">Montant</label>
+            <input class="form_input" type="number" id="montant" name="montant" />
+            <button type="submit" class="vld_btn">Valider</button>
+          </form>
         </div>
       </div>
+    </div>
 
     <div class="tableaux">
       <table class="table">
@@ -65,7 +67,7 @@
             <th>Montant</th>
             <th>Action</th>
           </tr>
-         <!--
+          <!--
             <tbody>
              <tr>
                <td>Nourriture</td>
@@ -87,4 +89,5 @@
 
   <script src="gest_buget.js"></script>
 </body>
+
 </html>
