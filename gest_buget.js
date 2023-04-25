@@ -1,7 +1,10 @@
 
+<<<<<<< HEAD
 let initialDepenses = JSON.parse(localStorage.getItem('depenses')) || []
 
 
+=======
+>>>>>>> bebac6dc1d4750f6bef058e781a45e419bd010ee
 const compteurElement = document.querySelector(".compteur")
 const table = document.querySelector(".table")
 const tbody = document.createElement("tbody")
@@ -26,7 +29,11 @@ let depenses = getDepeneses()
 
 // remplissage de la table
 function createTable(){
+<<<<<<< HEAD
     for (let index = 0; index < depenses.length; index++) {
+=======
+    for (let index = 0; index < 2; index++) {
+>>>>>>> bebac6dc1d4750f6bef058e781a45e419bd010ee
        let row = document.createElement('tr')
        // creation des boutons
        let buttoncell = document.createElement("td")
@@ -38,9 +45,15 @@ function createTable(){
        buttonSuppresion.setAttribute("class", "sup_btn")
        buttonModification.appendChild( buttonText)
        buttonSuppresion.appendChild( buttonTexte)
+<<<<<<< HEAD
 
         for (let element = 0; element < Object.keys(depenses[0]); element++) {
 
+=======
+
+        for (let element = 0; element < depenses.length; element++) {
+
+>>>>>>> bebac6dc1d4750f6bef058e781a45e419bd010ee
             // Ajout des td
             const cell = document.createElement('td')
             const cellText = document.createTextNode(
@@ -74,7 +87,10 @@ buttonSuppresion.forEach(function(button){
        let filtreTitre = depenses.filter((titres) => titres.titre !== titre)
        depenses = filtreTitre
        setCompteur(depenses.length) 
+<<<<<<< HEAD
        setDepenses(depenses)
+=======
+>>>>>>> bebac6dc1d4750f6bef058e781a45e419bd010ee
     })
 })
 
@@ -111,6 +127,81 @@ window.onclick = function(event){
         modal.style.display="none"
     }
 }
+<<<<<<< HEAD
+=======
+
+// Ajouter une depense
+
+let vld_btn = document.querySelector('.vld_btn')
+vld_btn.onclick = function(event){
+    event.preventDefault()
+    console.log("cliquer")
+    const titre = document.getElementById("titre").value
+    const montant = document.getElementById("montant").value
+    if(!titre || !montant){
+        alert("Merci de bien vouloir tout remplir !")
+    return
+    }
+    const newDepense = {titre, montant}
+    depenses.push(newDepense)
+    setCompteur(depenses.length)
+
+    // Ajouter un tr
+    let row = document.createElement("tr")
+    let cell0 = row.insertCell(0)
+    let cell1 = row.insertCell(1)
+    const cell0Text = document.createTextNode(titre)
+    const cell1Text = document.createTextNode(montant)
+    cell0.appendChild(cell0Text)
+    cell1.appendChild(cell1Text)
+    row.appendChild(cell0)
+    row.appendChild(cell1)
+    
+    // creation des boutons
+    let buttoncell = document.createElement("td")
+    let buttonModification = document.createElement("button")
+    let buttonSuppresion = document.createElement("button")
+    let buttonText = document.createTextNode("Modifier")
+    let buttonTexte = document.createTextNode("Supprimer")
+    buttonModification.setAttribute("class","mdf_btn")
+    buttonSuppresion.setAttribute("class", "sup_btn")
+    
+    buttoncell.appendChild(buttonModification)
+
+    // reaction boutton
+    buttonSuppresion.setAttribute("titreDepenses", titre)
+    buttoncell.appendChild(buttonSuppresion)
+
+    // Ajouter un evenement 
+    buttonSuppresion.addEventListener('click',function(){
+        const titre = this.getAttribute("titreDepenses")
+       
+       let row =document.getElementById(titre)
+       row.parentNode.removeChild(row)
+
+       // Enlever l'element supprimer
+       let filtreTitre = depenses.filter((titres) => titres.titre !== titre)
+       depenses = filtreTitre
+       setCompteur(depenses.length) 
+    })
+
+    buttonModification.appendChild( buttonText)
+    buttonSuppresion.appendChild( buttonTexte)
+
+    row.appendChild(buttoncell)
+
+    row.setAttribute("id", titre)
+    row.setAttribute("id", montant)
+    tbody.appendChild(row)
+    table.appendChild(tbody)
+    document.body.appendChild(table)
+
+    //Vider les inputs
+    document.getElementById("titre").value = ''
+    document.getElementById("montant").value = ''
+    modal.style.display="none"
+}
+>>>>>>> bebac6dc1d4750f6bef058e781a45e419bd010ee
 
 // Ajouter une depense
 
