@@ -86,8 +86,58 @@
     </div>
 
   </div>
+  
+  <div class="d_2">
+    <div class="tete_tableau">
+      <h4>Liste revenus</h4>
+      <button id="ajouter_revenu" type="button">Ajouter Revenu</button>
+    </div>
+    
+    <!--Le Modals-->
+    <div class="modals" id="revenu_modals">
+      <div class="models_content">
+        <span class="fermers">X</span>
+        <div class="form">
+          <form method="post">
+            <label for="name">Titre</label>
+            <input class="form_input" type="text" id="titreRevenu" name="titre" />
+            <label for="name">Montant</label>
+            <input class="form_input" type="number" id="montantRevenu" name="montant" />
+            <button type="submit" class="vld_btns">Valider</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  
+    <div class="tableaux">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Titre</th>
+            <th>Montant</th>
+            <th>Action</th>
+          </tr>
+          <!--
+            <tbody>
+             <tr>
+               <td>Nourriture</td>
+               <td>2000</td>
+               <td><button class="mdf_btn">Modifier</button>|<button class="sup_btn">Supprimer</button></td>
+             </tr>
+             <tr>
+               <td>Cafe</td>
+               <td>100</td>
+               <td><button class="mdf_btn">Modifier</button>|<button class="sup_btn">Supprimer</button></td>
+             </tr>
+          </tbody>
+         -->
+        </thead>
+      </table>
+    </div>
+  </div>
 
-  <script src="gest_buget.js"></script>
+  <script src="gest_buget.js" defer></script>
+
 </body>
 
 </html>
