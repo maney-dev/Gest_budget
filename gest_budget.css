@@ -25,9 +25,7 @@ h2{
     justify-content: space-between;
     align-items: center;
 }
-.compteur{
-    
-}
+
 #ajouter_depense{
     background-color: #1C8D73;
     color: white;
@@ -118,6 +116,8 @@ h2{
     width: 100%;
 }
 
+
+
 /* deuxieme partie*/
 
 #ajouter_revenu{
@@ -160,6 +160,25 @@ h2{
     color: black;
     text-decoration: none;
 }
+.tabless{
+    border-collapse: collapse;
+    width: 100%;
+
+}
+.tabless td, .tabless th{
+    border: 1px solid grey;
+    padding: 8px;
+    text-align: left;
+}
+.tabless tr:hover{
+    background-color: rgb(233, 233, 233);
+}
+.tabless th{
+    background-color: #1C8D73;
+    color: white;
+    
+}
+
 .vld_btns{
     background-color: #1C8D73;
     border: 1px solid #1C8D73;
