@@ -51,6 +51,7 @@
           <form method="post">
             <label for="name">Titre</label>
             <input class="form_input" type="text" id="titre" name="titre" />
+
             <label for="name">Montant</label>
             <input class="form_input" type="number" id="montant" name="montant" />
             <button type="submit" class="vld_btn">Valider</button>
@@ -87,56 +88,62 @@
 
   </div>
   
-  <div class="d_2">
-    <div class="tete_tableau">
-      <h4>Liste revenus</h4>
-      <button id="ajouter_revenu" type="button">Ajouter Revenu</button>
-    </div>
-    
-    <!--Le Modals-->
-    <div class="modals" id="revenu_modals">
-      <div class="models_content">
-        <span class="fermers">X</span>
-        <div class="form">
-          <form method="post">
-            <label for="name">Titre</label>
-            <input class="form_input" type="text" id="titreRevenu" name="titre" />
-            <label for="name">Montant</label>
-            <input class="form_input" type="number" id="montantRevenu" name="montant" />
-            <button type="submit" class="vld_btns">Valider</button>
-          </form>
-        </div>
+  <script src="gest_buget.js" ></script>
+  
+
+
+<div class="containers">
+  <div class="title-content">
+    <h4>Liste revenus</h4>
+    <button id="addRevenuModalButton" type="button"> Ajouter Revenu</button>
+  </div>
+
+  <!-- Le modal de la deuxieme partie-->
+  <div class="modol" id="revenuModal">
+    <div class="modal-content">
+      <span class="close">X</span>
+      <div class="formulaire">
+        <form method="post">
+          <label for="name">Titre</label>
+          <input class="formulaire-input" type="text" id="titre" name="titre">
+
+          <label for="name">Montant</label>
+          <input class="formulaire-input" type="number" id="montant" name="montant">
+  
+          <button type="submit" class="addRevenuButton">Ajouter</button>
+  
+        </form>
       </div>
     </div>
-  
-    <div class="tableauxs">
-      <table class="tabless">
+  </div>
+
+    <div class="revenus">
+      <table class="tables">
         <thead>
           <tr>
             <th>Titre</th>
             <th>Montant</th>
             <th>Action</th>
           </tr>
-          <!--
-            <tbody>
-             <tr>
-               <td>Nourriture</td>
-               <td>2000</td>
-               <td><button class="mdf_btn">Modifier</button>|<button class="sup_btn">Supprimer</button></td>
-             </tr>
-             <tr>
-               <td>Cafe</td>
-               <td>100</td>
-               <td><button class="mdf_btn">Modifier</button>|<button class="sup_btn">Supprimer</button></td>
-             </tr>
-          </tbody>
-         -->
         </thead>
+        <!--
+          <tbody>
+            <tr>
+              <td>cafe</td>
+              <td>100</td>
+              <td>
+              <button class="modify-btn">Modifier</button>
+              <button class="delet-btn">Supprimer</button>
+            </td>
+          </tr>
+          </tbody>
+        -->
       </table>
     </div>
-  </div>
 
-  <script src="gest_buget.js" defer></script>
+</div>
+
+<script src="gest_bud.js"></script>
 
 </body>
 

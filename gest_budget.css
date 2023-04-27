@@ -117,18 +117,60 @@ h2{
 }
 
 
-
-/* deuxieme partie*/
-
-#ajouter_revenu{
+/* La deuxieme partie*/
+.containers{
+    width: 960px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.title-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+/* 
+.count{
+    colo: grey
+}
+*/
+#addRevenuModalButton{
     background-color: #1C8D73;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     cursor: pointer;
 }
-
-.modals{
+.tables{
+    border-collapse: collapse;
+    width: 100%;
+}
+.tables th, .tables td{
+    border: 1px solid grey;
+    padding: 8px;
+    text-align: left;
+}
+.tables tr:hover{
+    background-color: rgb(233, 233, 233);
+}
+.tables th{
+    background-color: #1C8D73;
+    color: white;
+}
+.modify-btn{
+    background-color: #CAD5E2;
+    border: 1px solid #CAD5E2;
+    padding: 8px 12px ;
+    cursor: pointer;
+}
+.delet-btn{
+    background-color: red;
+    border: 1px solid red;
+    color: white;
+    padding: 8px 12px ;
+    cursor: pointer;
+}
+/* le modal*/
+.modol{
     display: none;
     position: fixed;
     z-index: 1;
@@ -141,45 +183,37 @@ h2{
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
 }
-/* Le contenu de notre model*/
-.models_content{
+
+/* le contenu de notre modal number 2*/
+.modal-content{
     background-color: #CAD5E2;
     margin: auto;
     padding: 20px;
     border: 1px solid grey;
     width: 50%;
 }
-.fermers{
+.close{
     color: grey;
     float: right;
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
 }
-.fermers:hover, .fermers:focus{
+.clos:hover, 
+.clos:focus{
     color: black;
     text-decoration: none;
 }
-.tabless{
-    border-collapse: collapse;
+.formulaire-input{
     width: 100%;
-
+    padding: 12px 20px;
+    margin: 8px 0;
+    display:inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
-.tabless td, .tabless th{
-    border: 1px solid grey;
-    padding: 8px;
-    text-align: left;
-}
-.tabless tr:hover{
-    background-color: rgb(233, 233, 233);
-}
-.tabless th{
-    background-color: #1C8D73;
-    color: white;
-    
-}
-
-.vld_btns{
+.addRevenuButton{
     background-color: #1C8D73;
     border: 1px solid #1C8D73;
     color: white;
@@ -187,7 +221,4 @@ h2{
     margin: 8px 0;
     cursor: pointer;
     width: 100%;
-}
-.d_2{
-    padding-top: 50px;
 }
