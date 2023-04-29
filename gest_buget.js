@@ -1,13 +1,13 @@
 
 let initialDepenses = JSON.parse(localStorage.getItem('depenses')) || []
 
-const compteurElement = document.querySelector(".spans")
+const compteurElement = document.querySelector(".spans_1")
 const table = document.querySelector(".table")
 const tbody = document.createElement("tbody")
 
 // Fonction compteur
-function setCompteur(spans){
-    compteurElement.innerHTML = spans
+function setCompteur(spans_1){
+    compteurElement.innerHTML = spans_1
 }
 setCompteur()
 
@@ -16,7 +16,7 @@ function setDepenses(depenses){
     localStorage.setItem('depenses', JSON.stringify(depenses))
 }
 
-// recuper les infoemation depuis le localstaorage
+// recuper les information depuis le localstaorage
 function getDepeneses(){
     return JSON.parse(localStorage.getItem('depenses'))
 }
