@@ -1,3 +1,4 @@
+
 let initialRevenus = JSON.parse(localStorage.getItem('revenus')) || []
 // Un tableau de revenu
 /*
@@ -13,7 +14,7 @@ const tblBody = document.createElement('tbody')
 
 //function setCount
 
-    function setCount(spans_2){
+function setCount(spans_2){
     countElement.innerHTML = spans_2
 }
 setCount()
@@ -160,7 +161,7 @@ addRevenuButton.onclick = function(event){
        // Enlever l'element supprimer
        let filtreTitre = revenus.filter((titres) => titres.titre !== titre)
        revenus = filtreTitre
-       //setCount(revenus.length) 
+       setCount(revenus.length) 
        setRevenus(revenus)
     })
 
@@ -193,7 +194,7 @@ addRevenuButton.onclick = function(event){
     //Vider les inputs apres ajout d'un nouvel element 
     document.getElementById("titre").value = ''
     document.getElementById("montant").value = ''
-    modal.style.display="none"// masquer le modal apres ajout
+    modol.style.display="none"// masquer le modal apres ajout
 }
 
 setCount(revenus.length)
