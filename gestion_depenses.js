@@ -129,6 +129,7 @@ vld_btn.onclick = function(event){
     // localstorage
     setDepenses(depenses)
 
+
     // Ajouter un tr
     let row = document.createElement("tr")
     let cell0 = row.insertCell(0)

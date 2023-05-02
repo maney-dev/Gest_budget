@@ -114,12 +114,12 @@ window.onclick = function(event){
 let addRevenuButton = document.querySelector('.addRevenuButton')
 addRevenuButton.onclick = function(event){
     event.preventDefault()
-    const titre = document.getElementById("titre").value
-    const montant = document.getElementById("montant").value
-    /* if(!titre || !montant){
+    const titre = document.getElementById("titreRevenu").value
+    const montant = document.getElementById("montantRevenu").value
+    if(!titre || !montant){
         alert("Merci de bien vouloir tout remplir !")
     return
-    }*/
+    }
     const newRevenu = {titre, montant}
     revenus.push(newRevenu)
     setCount(revenus.length)
@@ -145,7 +145,7 @@ addRevenuButton.onclick = function(event){
     let buttontexts = document.createTextNode("Supprimer")
     modifyButton.setAttribute("class","modify-btn")
     buttonDelete.setAttribute("class", "delet-btn")
-    modifyButton.setAttribute("titreRevenus", montant)
+    modifyButton.setAttribute("titreRevenus", montantRevenu)
     modifyButton.appendChild( buttontext)
     buttonDelete.appendChild( buttontexts)
 
@@ -158,13 +158,13 @@ addRevenuButton.onclick = function(event){
 
     // ajouter un evenement + button suppressions
     modifyButton.addEventListener('click',function(){
-        const titre = this.getAttribute("titreRevenus")
+        const titreR = this.getAttribute("titreRevenus")
          
-       let tr = document.getElementById(montant)
-       tr.parentNode.removeChild(tr)
+       let tr = document.getElementById("montantRevenu")
+      console.log('modifier', tr)
 
        // Enlever l'element supprimer
-       let filtreTitre = revenus.filter((titres) => titres.titre !== titre)
+       let filtreTitre = revenus.filter((titres) => titres.titreR !== titreR)
        revenus = filtreTitre
        setCount(revenus.length) 
        setRevenus(revenus)
@@ -176,7 +176,8 @@ addRevenuButton.onclick = function(event){
     buttonDelete.addEventListener('click',function(){
         const titre = this.getAttribute("titreRevenus")
          
-       let tr = document.getElementById(titre)
+       let tr = document.getElementById("titreRevenu")
+       
        tr.parentNode.removeChild(tr)
 
        // Enlever l'element supprimer
@@ -190,15 +191,15 @@ addRevenuButton.onclick = function(event){
 
     tr.appendChild(buttoncol) //on recupere la ligne et le colonne du bouton apres ajout d'un nouvel element
 
-    tr.setAttribute("id", titre)
-    tr.setAttribute("id", montant)
+    tr.setAttribute("id", titreRevenu)
+    tr.setAttribute("id", montantRevenu)
     tblBody.appendChild(tr)
     tables.appendChild(tblBody)
     document.body.appendChild(tables)
 
     //Vider les inputs apres ajout d'un nouvel element 
-    document.getElementById("titre").value = ''
-    document.getElementById("montant").value = ''
+    document.getElementById("titreRevenu").value = ''
+    document.getElementById("montantRevenu").value = ''
     modol.style.display="none"// masquer le modal apres ajout
 }
 
