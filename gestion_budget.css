@@ -20,6 +20,12 @@ h2{
     padding: 15px;
     padding-inline: 20px;
 }
+.spans_1{
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 15px;
+    padding-inline: 20px;
+}
 .tete_tableau{
     display: flex;
     justify-content: space-between;
@@ -122,6 +128,12 @@ h2{
     width: 960px;
     padding: 0 15px;
     margin: 0 auto;
+}
+.spans_2{
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 15px;
+    padding-inline: 20px;
 }
 .title-content{
     display: flex;

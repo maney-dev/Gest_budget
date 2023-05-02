@@ -19,6 +19,11 @@ function setCount(spans_2){
 }
 setCount()
 
+function setConte(spans){
+    countElement.innerHTML = spans
+}
+setConte()
+
 
 // ajouter depuis le localstorage
 function setRevenus(revenus){
@@ -111,10 +116,10 @@ addRevenuButton.onclick = function(event){
     event.preventDefault()
     const titre = document.getElementById("titre").value
     const montant = document.getElementById("montant").value
-    if(!titre || !montant){
+    /* if(!titre || !montant){
         alert("Merci de bien vouloir tout remplir !")
     return
-    }
+    }*/
     const newRevenu = {titre, montant}
     revenus.push(newRevenu)
     setCount(revenus.length)
@@ -123,8 +128,8 @@ addRevenuButton.onclick = function(event){
 
     // Ajouter un tr
     let tr = document.createElement("tr")
-    let col0 = tr.insertCol(0)
-    let col1 = tr.insertCol(1)
+    let col0 = tr.insertCell(0)
+    let col1 = tr.insertCell(1)
     const col0Text = document.createTextNode(titre)
     const col1Text = document.createTextNode(montant)
     col0.appendChild(col0Text)
@@ -139,9 +144,9 @@ addRevenuButton.onclick = function(event){
     let buttontext = document.createTextNode("Modifier")
     let buttontexts = document.createTextNode("Supprimer")
     modifyButton.setAttribute("class","modify-btn")
-    buttonDelete.setAttribute("class", "modify-btn")
+    buttonDelete.setAttribute("class", "delet-btn")
     modifyButton.setAttribute("titreRevenus", montant)
-    buttonModification.appendChild( buttontext)
+    modifyButton.appendChild( buttontext)
     buttonDelete.appendChild( buttontexts)
 
     // on affiche les buttons du nouveau element ajoute
@@ -151,7 +156,7 @@ addRevenuButton.onclick = function(event){
     modifyButton.appendChild( buttontext)
     buttonDelete.appendChild( buttontexts)
 
-    // ajouter un evement + button suppressions
+    // ajouter un evenement + button suppressions
     modifyButton.addEventListener('click',function(){
         const titre = this.getAttribute("titreRevenus")
          
@@ -176,7 +181,7 @@ addRevenuButton.onclick = function(event){
 
        // Enlever l'element supprimer
        let filtreTitre = revenus.filter((titres) => titres.titre !== titre)
-       depenses = filtreTitre
+       revenus = filtreTitre
        setCount(revenus.length) 
        setRevenus(revenus)
     })
