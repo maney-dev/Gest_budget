@@ -174,7 +174,7 @@ h2{
     padding: 8px 12px ;
     cursor: pointer;
 }
-.delet-btn{
+.delete-btn{
     background-color: red;
     border: 1px solid red;
     color: white;

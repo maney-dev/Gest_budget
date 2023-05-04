@@ -4,7 +4,7 @@ let initialRevenus = JSON.parse(localStorage.getItem('revenus')) || []
 /*
 let revenus = [
     {titre:"cafe", montant:"100"},
-    {titre:"mague", montant:"200"},
+    {titre:"mangue", montant:"200"},
    
 ]*/
 
@@ -15,7 +15,7 @@ const tblBody = document.createElement('tbody')
 //function setCount
 
 function setCount(spans_2){
-    countElement.innerHTML = spans_2
+    countElement.innerHTML = spans_2 
 }
 setCount()
 
@@ -25,12 +25,12 @@ function setConte(spans){
 setConte()
 
 
-// ajouter depuis le localstorage
+// ajouter depuis le localStorage
 function setRevenus(revenus){
     localStorage.setItem('revenus', JSON.stringify(revenus))
 }
 
-// recuper les informations depuis le localstaorage
+// recuper les informations depuis le localStorage
 function getRevenus(){
     return JSON.parse(localStorage.getItem('revenus'))
 }
@@ -50,7 +50,7 @@ function createTables (){
         modifyButton.setAttribute('class','modify-btn')
         let deleteButton = document.createElement("button")
         let buttontexts = document.createTextNode("Supprimer")
-        deleteButton.setAttribute('class', 'delet-btn')
+        deleteButton.setAttribute('class', 'delete-btn')
         deleteButton.appendChild(buttontexts)
 
         for (let elements = 0; elements <Object.keys(revenus[0]); elements++) {
@@ -75,7 +75,7 @@ function createTables (){
     document.body.appendChild(tables)
 }
 createTables()
-let deleteButton = document.querySelectorAll(".delet-btn")
+let deleteButton = document.querySelectorAll(".delete-btn")
 deleteButton.forEach(function(button){
     button.addEventListener('click', function(){
         const titre = this.getAttribute("titreRevenus")
@@ -144,7 +144,7 @@ addRevenuButton.onclick = function(event){
     let buttontext = document.createTextNode("Modifier")
     let buttontexts = document.createTextNode("Supprimer")
     modifyButton.setAttribute("class","modify-btn")
-    buttonDelete.setAttribute("class", "delet-btn")
+    buttonDelete.setAttribute("class", "delete-btn")
     modifyButton.setAttribute("titreRevenus", montantRevenu)
     modifyButton.appendChild( buttontext)
     buttonDelete.appendChild( buttontexts)
@@ -160,8 +160,8 @@ addRevenuButton.onclick = function(event){
     modifyButton.addEventListener('click',function(){
         const titreR = this.getAttribute("titreRevenus")
          
-       let tr = document.getElementById("montantRevenu")
-      console.log('modifier', tr)
+       let tr = document.getElementById(montantRevenu)
+        tr.parentNode.removeChild(tr)
 
        // Enlever l'element supprimer
        let filtreTitre = revenus.filter((titres) => titres.titreR !== titreR)
@@ -176,7 +176,7 @@ addRevenuButton.onclick = function(event){
     buttonDelete.addEventListener('click',function(){
         const titre = this.getAttribute("titreRevenus")
          
-       let tr = document.getElementById("titreRevenu")
+       let tr = document.getElementById(montantRevenu)
        
        tr.parentNode.removeChild(tr)
 
