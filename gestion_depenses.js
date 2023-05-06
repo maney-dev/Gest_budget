@@ -21,6 +21,12 @@ function getDepeneses(){
     return JSON.parse(localStorage.getItem('depenses'))
 }
 
+// Supprimer depuis le LocalStorage
+function DeleteDepenses(depenses){
+    localStorage.removeItem('depenses', JSON.stringify(depenses))
+}
+//DeleteDepenses()
+
 setDepenses(initialDepenses)
 let depenses = getDepeneses()
 
@@ -74,7 +80,9 @@ buttonSuppresion.forEach(function(button){
        let filtreTitre = depenses.filter((titres) => titres.titre !== titre)
        depenses = filtreTitre
        setCompteur(depenses.length) 
+       setCompteur(depenses.removeChild) 
        setDepenses(depenses)
+       DeleteDepenses(depenses.removeChild(row))
     })
 })
 
@@ -188,8 +196,9 @@ vld_btn.onclick = function(event){
        // Enlever l'element supprimer
        let filtreTitre = depenses.filter((titres) => titres.titre !== titre)
        depenses = filtreTitre
-       setCompteur(depenses.length) 
+       setCompteur(depenses.length)
        setDepenses(depenses)
+       DeleteDepenses(row)
     })
 
     buttoncell.appendChild(buttonSuppresion)
@@ -210,6 +219,3 @@ vld_btn.onclick = function(event){
 
 setCompteur(depenses.length)
 
-
-
-// notre deuxieme partie

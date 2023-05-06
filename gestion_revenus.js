@@ -16,6 +16,7 @@ const tblBody = document.createElement('tbody')
 
 function setCount(spans_2){
     countElement.innerHTML = spans_2 
+   
 }
 setCount()
 
@@ -33,6 +34,11 @@ function setRevenus(revenus){
 // recuper les informations depuis le localStorage
 function getRevenus(){
     return JSON.parse(localStorage.getItem('revenus'))
+}
+
+// Supprimer les informations depuis le LocalStorage
+function DeleteRevenus(revenus){
+    localStorage.removeItem('revenus', JSON.stringify(revenus))
 }
 
 setRevenus(initialRevenus)
@@ -87,6 +93,7 @@ deleteButton.forEach(function(button){
         revenus = filtreTitre
        setCount(revenus.length)
        setRevenus(revenus)
+       DeleteRevenus(revenus)
         
     })
 })
@@ -185,6 +192,7 @@ addRevenuButton.onclick = function(event){
        revenus = filtreTitre
        setCount(revenus.length) 
        setRevenus(revenus)
+       DeleteRevenus(revenus)
     })
 
     buttoncol.appendChild(buttonDelete)

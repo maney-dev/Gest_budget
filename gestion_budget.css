@@ -42,12 +42,19 @@ h2{
 .table{
     border-collapse: collapse;
     width: 100%;
+    top: -30vh;
+    position: relative;
+   
 
 }
-.table td, .table th{
+/*.tableaux{
+    background-color: #d70909;
+}*/
+.table td , .table th{
     border: 1px solid grey;
-    padding: 8px;
+   padding: 8px;
     text-align: left;
+    
 }
 .table tr:hover{
     background-color: rgb(233, 233, 233);
@@ -86,7 +93,7 @@ h2{
 }
 /* Le contenu de notre model*/
 .model_content{
-    background-color: #CAD5E2;
+    background-color: #ecec0c;
     margin: auto;
     padding: 20px;
     border: 1px solid grey;

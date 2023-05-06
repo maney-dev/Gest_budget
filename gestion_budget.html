@@ -25,7 +25,7 @@
         <div class="division_titre">
           <div>
             <h3>Depense</h3>
-            <span class="spans_2" id="mntRv">100.000 CFA</span>
+            <span class="spans_2" id="">100.000 CFA</span>
           </div>
         </div>
         <div class="division_titre">
@@ -37,54 +37,56 @@
         </div>
       </div>
 
-      <div class="tete_tableau">
-        <h4>Liste depense</h4>
-        <button id="ajouter_depense" type="button">Ajouter Depense</button>
-      </div>
-    </div>
-
-    <!--Le Model-->
-    <div class="modal" id="depense_modal">
-      <div class="model_content">
-        <span class="fermer">X</span>
-        <div class="form">
-          <form method="post">
-            <label for="name">Titre</label>
-            <input class="form_input" type="text" id="titre" name="titre" />
-
-            <label for="name">Montant</label>
-            <input class="form_input" type="number" id="montant" name="montant" />
-            <button type="submit" class="vld_btn">Valider</button>
-          </form>
+      <div class="containers">
+        <div class="tete_tableau">
+          <h4>Liste depense</h4>
+          <button id="ajouter_depense" type="button">Ajouter Depense</button>
         </div>
       </div>
-    </div>
-
-    <div class="tableaux">
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Titre</th>
-            <th>Montant</th>
-            <th>Action</th>
-          </tr>
+  
+      <!--Le Model-->
+      <div class="modal" id="depense_modal">
+        <div class="model_content">
+          <span class="fermer">X</span>
+          <div class="form">
+            <form method="post">
+              <label for="name">Titre</label>
+              <input class="form_input" type="text" id="titre" name="titre" />
+  
+              <label for="name">Montant</label>
+              <input class="form_input" type="number" id="montant" name="montant" />
+              <button type="submit" class="vld_btn">Valider</button>
+            </form>
+          </div>
+        </div>
+      </div>
+  
+      <div class="tableaux">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Titre</th>
+              <th>Montant</th>
+              <th>Action</th>
+            </tr>
+          </thead>
           <!--
-            <tbody>
-             <tr>
-               <td>Nourriture</td>
-               <td>2000</td>
-               <td><button class="mdf_btn">Modifier</button>|<button class="sup_btn">Supprimer</button></td>
-             </tr>
-             <tr>
-               <td>Cafe</td>
-               <td>100</td>
-               <td><button class="mdf_btn">Modifier</button>|<button class="sup_btn">Supprimer</button></td>
-             </tr>
+          <tbody>
+           <tr>
+             <td>Nourriture</td>
+              <td>2000</td>
+              <td><button class="mdf_btn">Modifier</button>|<button class="sup_btn">Supprimer</button></td>
+            </tr>
+            <tr>
+              <td>Cafe</td>
+              <td>100</td>
+              <td><button class="mdf_btn">Modifier</button>|<button class="sup_btn">Supprimer</button></td>
+            </tr>
           </tbody>
-         -->
-        </thead>
-      </table>
-    </div>
+          -->
+        </table>
+      </div>
+      </div>
 
   </div>
   
@@ -94,30 +96,30 @@
   
 
 
-<div class="containers">
-  <div class="title-content">
-    <h4>Liste revenus</h4>
-    <button id="addRevenuModalButton" type="button"> Ajouter Revenu</button>
-  </div>
+  <div class="containers">
+   <div class="title-content">
+      <h4>Liste revenus</h4>
+      <button id="addRevenuModalButton" type="button"> Ajouter Revenu</button>
+    </div>
 
-  <!-- Le modal de la deuxieme partie-->
-  <div class="modol" id="revenuModal">
-    <div class="modal-content">
-      <span class="close">X</span>
-      <div class="formulaire">
-        <form method="post">
-          <label for="name">Titre</label>
-          <input class="formulaire-input" type="text" id="titreRevenu" name="titre">
+    <!-- Le modal de la deuxieme partie-->
+   <div class="modol" id="revenuModal">
+     <div class="modal-content">
+       <span class="close">X</span>
+       <div class="formulaire">
+         <form method="post">
+           <label for="name">Titre</label>
+           <input class="formulaire-input" type="text" id="titreRevenu" name="titre">
 
-          <label for="name">Montant</label>
-          <input class="formulaire-input" type="number" id="montantRevenu" name="montant">
+            <label for="name">Montant</label>
+            <input class="formulaire-input" type="number" id="montantRevenu" name="montant">
   
-          <button type="submit" class="addRevenuButton">Ajouter</button>
+            <button type="submit" class="addRevenuButton">Ajouter</button>
   
-        </form>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
 
     <div class="revenus">
       <table class="tables">
@@ -143,9 +145,9 @@
       </table>
     </div>
 
-</div>
+  </div>
 
-<script src="gestion_revenus.js"></script>
+  <script src="gestion_revenus.js"></script>
 
 </body>
 
