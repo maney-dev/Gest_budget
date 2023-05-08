@@ -22,7 +22,6 @@ setCount()*/
 
 let tblRevenu=[100]
 let montantR=tblRevenu
-let montant_revenu = document.getElementById('montant_revenu')
 document.getElementById('montant_revenu').innerHTML=tblRevenu.reduce(maFonction)
 function maFonction(montantRe, montant_cour){
     for (let tblRevenu = 0; tblRevenu < tblRevenu.length; i++) {
