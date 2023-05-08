@@ -11,6 +11,9 @@ function setCompteur(spans_1){
 }
 setCompteur()
 
+
+
+
 // ajouter depuis le localstorage
 function setDepenses(depenses){
     localStorage.setItem('depenses', JSON.stringify(depenses))

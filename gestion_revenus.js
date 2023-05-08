@@ -1,4 +1,3 @@
-
 let initialRevenus = JSON.parse(localStorage.getItem('revenus')) || []
 // Un tableau de revenu
 /*
@@ -8,20 +7,37 @@ let revenus = [
    
 ]*/
 
-const countElement = document.querySelector('.spans_2')
+//const countElement = document.querySelector('.spans_2')
 const tables = document.querySelector('.tables')
 const tblBody = document.createElement('tbody')
 
 //function setCount
 
-function setCount(spans_2){
+/*function setCount(spans_2){
     countElement.innerHTML = spans_2 
    
 }
-setCount()
+setCount()*/
+
+
+let tblRevenu=[100]
+let montantR=tblRevenu
+let montant_revenu = document.getElementById('montant_revenu')
+document.getElementById('montant_revenu').innerHTML=tblRevenu.reduce(maFonction)
+function maFonction(montantRe, montant_cour){
+    for (let tblRevenu = 0; tblRevenu < tblRevenu.length; i++) {
+        
+        if (montant_revenu) {
+            montantR.push(montant_revenu)
+        }
+        return montantRe + montant_cour
+    }
+    localStorage.getItem('montant_revenu')
+}
+
 
 function setConte(spans){
-    countElement.innerHTML = spans
+    //countElement.innerHTML = spans
 }
 setConte()
 
@@ -91,7 +107,7 @@ deleteButton.forEach(function(button){
         // enlever l'lelemet supprimer
         let filtreTitre = revenus.filter((titres) => titres.titre !== titre)
         revenus = filtreTitre
-       setCount(revenus.length)
+      // setCount(revenus.length)
        setRevenus(revenus)
        DeleteRevenus(revenus)
         
@@ -129,7 +145,7 @@ addRevenuButton.onclick = function(event){
     }
     const newRevenu = {titre, montant}
     revenus.push(newRevenu)
-    setCount(revenus.length)
+    //setCount(revenus.length)
     // localstorage
     setRevenus(revenus)
 
@@ -173,7 +189,7 @@ addRevenuButton.onclick = function(event){
        // Enlever l'element supprimer
        let filtreTitre = revenus.filter((titres) => titres.titreR !== titreR)
        revenus = filtreTitre
-       setCount(revenus.length) 
+      // setCount(revenus.length) 
        setRevenus(revenus)
     })
 
@@ -190,7 +206,7 @@ addRevenuButton.onclick = function(event){
        // Enlever l'element supprimer
        let filtreTitre = revenus.filter((titres) => titres.titre !== titre)
        revenus = filtreTitre
-       setCount(revenus.length) 
+      // setCount(revenus.length) 
        setRevenus(revenus)
        DeleteRevenus(revenus)
     })
@@ -211,4 +227,4 @@ addRevenuButton.onclick = function(event){
     modol.style.display="none"// masquer le modal apres ajout
 }
 
-setCount(revenus.length)
+//setCount(revenus.length)
