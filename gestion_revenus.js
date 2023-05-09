@@ -20,18 +20,18 @@ const tblBody = document.createElement('tbody')
 setCount()*/
 
 
-let tblRevenu=[100]
-let montantR=tblRevenu
-document.getElementById('montant_revenu').innerHTML=tblRevenu.reduce(maFonction)
+let tblbudget=[120000]
+let montantBudg=tblbudget
+document.getElementById('montant_budget').innerHTML=tblbudget.reduce(maFonction)
 function maFonction(montantRe, montant_cour){
-    for (let tblRevenu = 0; tblRevenu < tblRevenu.length; i++) {
+    for (let tblbudget = 0; tblbudget < tblbudget.length; i++) {
         
-        if (montant_revenu) {
-            montantR.push(montant_revenu)
+        if (montantBudg) {
+            montantBudg.push(montantBudg)
         }
         return montantRe + montant_cour
     }
-    localStorage.getItem('montant_revenu')
+    localStorage.getItem('montant_budget')
 }
 
 
@@ -65,10 +65,10 @@ function createTables (){
         let tr = document.createElement("tr")
         // creation des buttons
         let buttonCol = document.createElement("td")
-        let modifyButton = document.createElement("button")
+        //let modifyButton = document.createElement("button")
         let buttontext = document.createTextNode("Modifier")
-        modifyButton.appendChild(buttontext)
-        modifyButton.setAttribute('class','modify-btn')
+        //modifyButton.appendChild(buttontext)
+        //modifyButton.setAttribute('class','modify-btn')
         let deleteButton = document.createElement("button")
         let buttontexts = document.createTextNode("Supprimer")
         deleteButton.setAttribute('class', 'delete-btn')
@@ -82,7 +82,7 @@ function createTables (){
             )
 
             deleteButton.setAttribute("titreRevenus", revenus[point].titre)
-            buttonCol.appendChild(modifyButton)
+            //buttonCol.appendChild(modifyButton)
             buttonCol.appendChild(deleteButton)
             col.appendChild(colText)
             tr.appendChild(col)
@@ -161,24 +161,24 @@ addRevenuButton.onclick = function(event){
 
     // creation des boutons du nouveau element ajoute
     let buttoncol = document.createElement("td")
-    let modifyButton = document.createElement("button")
+    //let modifyButton = document.createElement("button")
     let buttonDelete = document.createElement("button")
     let buttontext = document.createTextNode("Modifier")
     let buttontexts = document.createTextNode("Supprimer")
-    modifyButton.setAttribute("class","modify-btn")
+    //modifyButton.setAttribute("class","modify-btn")
     buttonDelete.setAttribute("class", "delete-btn")
-    modifyButton.setAttribute("titreRevenus", montantRevenu)
-    modifyButton.appendChild( buttontext)
+    //modifyButton.setAttribute("titreRevenus", montantRevenu)
+   // modifyButton.appendChild( buttontext)
     buttonDelete.appendChild( buttontexts)
 
     // on affiche les buttons du nouveau element ajoute
-    buttoncol.appendChild(modifyButton)
+    //buttoncol.appendChild(modifyButton)
     buttoncol.appendChild(buttonDelete)
     // on affiche les texts des buttons
-    modifyButton.appendChild( buttontext)
+    //modifyButton.appendChild( buttontext)
     buttonDelete.appendChild( buttontexts)
 
-    // ajouter un evenement + button suppressions
+    /*// ajouter un evenement + button suppressions
     modifyButton.addEventListener('click',function(){
         const titreR = this.getAttribute("titreRevenus")
          
@@ -192,7 +192,7 @@ addRevenuButton.onclick = function(event){
        setRevenus(revenus)
     })
 
-    buttoncol.appendChild(modifyButton)
+    buttoncol.appendChild(modifyButton) */
 
     // ajouter un evement + button suppression
     buttonDelete.addEventListener('click',function(){

@@ -10,7 +10,19 @@ function setCompteur(spans_1){
     compteurElement.innerHTML = spans_1
 }
 setCompteur()
-
+let tblRevenu=[100000]
+let montantR=tblRevenu
+document.getElementById('montant_revenu').innerHTML=tblRevenu.reduce(maFonction)
+function maFonction(montantRe, montant_cour){
+    for (let tblRevenu = 0; tblRevenu < tblRevenu.length; i++) {
+        
+        if (montant_revenu) {
+            montantR.push(montant_revenu)
+        }
+        return montantRe + montant_cour
+    }
+    localStorage.getItem('montant_revenu')
+}
 
 
 
@@ -39,13 +51,13 @@ function createTable(){
        let row = document.createElement('tr')
        // creation des boutons
        let buttoncell = document.createElement("td")
-       let buttonModification = document.createElement("button")
+       //let buttonModification = document.createElement("button")
        let buttonSuppresion = document.createElement("button")
        let buttonText = document.createTextNode("Modifier")
        let buttonTexte = document.createTextNode("Supprimer")
-       buttonModification.setAttribute("class","mdf_btn")
+       //buttonModification.setAttribute("class","mdf_btn")
        buttonSuppresion.setAttribute("class", "sup_btn")
-       buttonModification.appendChild( buttonText)
+       //buttonModification.appendChild( buttonText)
        buttonSuppresion.appendChild( buttonTexte)
 
         for (let element = 0; element < Object.keys(depenses[0]); element++) {
@@ -56,7 +68,7 @@ function createTable(){
                 Object.values(depenses [index])[element]
             )
             buttonSuppresion.setAttribute("titreDepenses", depenses[index].titre)
-            buttoncell.appendChild(buttonModification)
+            //buttoncell.appendChild(buttonModification)
             buttoncell.appendChild(buttonSuppresion)
             cell.appendChild(cellText)
             row.appendChild(cell)
@@ -154,14 +166,14 @@ vld_btn.onclick = function(event){
     
     // creation des boutons du nouveau element ajoute
     let buttoncell = document.createElement("td")
-    let buttonModification = document.createElement("button")
+    //let buttonModification = document.createElement("button")
     let buttonSuppresion = document.createElement("button")
     let buttonText = document.createTextNode("Modifier")
     let buttonTexte = document.createTextNode("Supprimer")
-    buttonModification.setAttribute("class","mdf_btn")
+    //buttonModification.setAttribute("class","mdf_btn")
     buttonSuppresion.setAttribute("class", "sup_btn")
     buttonSuppresion.setAttribute("titreDepenses", montant)
-    buttonModification.appendChild( buttonText)
+    //buttonModification.appendChild( buttonText)
     buttonSuppresion.appendChild( buttonTexte)
 
 
@@ -170,10 +182,10 @@ vld_btn.onclick = function(event){
     buttoncell.appendChild(buttonModification)
     buttoncell.appendChild(buttonSuppresion)
     // on affiche les texts des buttons
-    buttonModification.appendChild( buttonText)
+    //buttonModification.appendChild( buttonText)
     buttonSuppresion.appendChild( buttonTexte)
 
-    // ajouter un evement + button suppressions
+   /* // ajouter un evement + button suppressions
     buttonModification.addEventListener('click',function(){
         const titre = this.getAttribute("titreDepenses")
          
@@ -187,7 +199,7 @@ vld_btn.onclick = function(event){
        setDepenses(depenses)
     })
 
-    buttoncell.appendChild(buttonModification)
+    buttoncell.appendChild(buttonModification)*/
 
     // ajouter un evement + button suppression
     buttonSuppresion.addEventListener('click',function(){
