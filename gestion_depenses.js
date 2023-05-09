@@ -179,7 +179,7 @@ vld_btn.onclick = function(event){
 
     
     // on affiche les buttons du nouveau element ajoute
-    buttoncell.appendChild(buttonModification)
+    //buttoncell.appendChild(buttonModification)
     buttoncell.appendChild(buttonSuppresion)
     // on affiche les texts des buttons
     //buttonModification.appendChild( buttonText)

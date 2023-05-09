@@ -1,4 +1,4 @@
-.container{
+.containers{
     width: 960px;
     padding: 0 15px;
     margin: 0 auto;
@@ -30,6 +30,7 @@ h2{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 50px;
 }
 
 #ajouter_depense{
