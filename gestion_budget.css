@@ -40,7 +40,7 @@ h2{
     margin: 8px 0;
     cursor: pointer;
 }
-.table{
+.tabled{
     border-collapse: collapse;
     width: 100%;
     top: 18vi;
@@ -51,19 +51,19 @@ h2{
 /*.tableaux{
     background-color: #d70909;
 }*/
-.table td , .table th{
+.tabled td , .tabled th{
     border: 1px solid grey;
    padding: 8px;
     text-align: left;
     
     
 }
-.table tr:hover{
+.tabled tr:hover{
     background-color: rgb(233, 233, 233);
     position: relative;
     
 }
-.table th{
+.tabled th{
     background-color: #1C8D73;
     color: white;
     
@@ -153,6 +153,7 @@ h2{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 15%;
     
 }
 /* 

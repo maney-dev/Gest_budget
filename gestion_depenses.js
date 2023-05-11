@@ -2,7 +2,7 @@
 let initialDepenses = JSON.parse(localStorage.getItem('depenses')) || []
 
 const compteurElement = document.querySelector(".spans_1")
-const table = document.querySelector(".table")
+const tabled = document.querySelector(".tabled")
 const tbodys = document.createElement("tbody")
 
 // Fonction compteur
@@ -46,7 +46,7 @@ setDepenses(initialDepenses)
 let depenses = getDepeneses()
 
 // remplissage de la table
-function createTable(){
+function createTabled(){
     for (let index = 0; index < depenses.length; index++) {
        let row = document.createElement('tr')
        // creation des boutons
@@ -78,11 +78,11 @@ function createTable(){
        
        tbodys.appendChild(row)
     }
-    table.appendChild(tbodys)
-    document.body.appendChild(table)
+    tabled.appendChild(tbodys)
+    document.body.appendChild(tabled)
 }
 
-createTable()
+createTabled()
 let buttonSuppresion = document.querySelectorAll(".sup_btn")
 buttonSuppresion.forEach(function(button){
     button.addEventListener('click', function(){
@@ -223,8 +223,8 @@ vld_btn.onclick = function(event){
     row.setAttribute("id", titre)
     row.setAttribute("id", montant)
     tbodys.appendChild(row)
-    table.appendChild(tbodys)
-    document.body.appendChild(table)
+    tabled.appendChild(tbodys)
+    document.body.appendChild(tabled)
 
     //Vider les inputs apres ajout d'un nouvel element 
     document.getElementById("titre").value = ''
