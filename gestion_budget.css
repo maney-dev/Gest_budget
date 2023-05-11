@@ -30,7 +30,7 @@ h2{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 #ajouter_depense{
@@ -43,8 +43,8 @@ h2{
 .table{
     border-collapse: collapse;
     width: 100%;
-    
-    position: relative;
+    top: 18vi;
+    position:fixed
    
 
 }
@@ -56,13 +56,17 @@ h2{
    padding: 8px;
     text-align: left;
     
+    
 }
 .table tr:hover{
     background-color: rgb(233, 233, 233);
+    position: relative;
+    
 }
 .table th{
     background-color: #1C8D73;
     color: white;
+    
     
 }
 .mdf_btn{
@@ -132,10 +136,12 @@ h2{
 
 
 /* La deuxieme partie*/
-.containers{
+.containersR{
     width: 960px;
     padding: 0 15px;
     margin: 0 auto;
+
+
 }
 .spans_2{
     border: 1px solid;
@@ -146,7 +152,8 @@ h2{
 .title-content{
     display: flex;
     justify-content: space-between;
-    align-items: center
+    align-items: center;
+    
 }
 /* 
 .count{

@@ -11,92 +11,89 @@
 </head>
 
 <body>
-  <div class="containere">
-    <div class="titre_container">
-      <h2>Gestion de Budget <span class="compteur"></span></h2>
-
-      <div class="header">
-        <div class="division_titre">
-          <div>
-            <h3>Budget</h3>
-            <span class="spans_1" id="montant_budget">120.000 CFA</span>
-          </div>
-        </div>
-        <div class="division_titre">
-          <div>
-            <h3>Depense</h3>
-            <span class="spans_2" id="montant_revenu">100.000 CFA</span>
-          </div>
-        </div>
-        <div class="division_titre">
-          <div>
-            <h3>Solde</h3>
-            <span class="spans">20.000 CFA</span>
-           <!--<h6>budget - depense = Solde</h6>--> 
-          </div>
-        </div>
-      </div>
-
-      <div class="containers">
-        <div class="tete_tableau">
-          <h4>Liste depense</h4>
-          <button id="ajouter_depense" type="button">Ajouter Depense</button>
-        </div>
-      </div>
   
-      <!--Le Model-->
-      <div class="modal" id="depense_modal">
-        <div class="model_content">
-          <span class="fermer">X</span>
-          <div class="form">
-            <form method="post">
-              <label for="name">Titre</label>
-              <input class="form_input" type="text" id="titre" name="titre" />
-  
-              <label for="name">Montant</label>
-              <input class="form_input" type="number" id="montant" name="montant" />
-              <button type="submit" class="vld_btn">Valider</button>
-            </form>
-          </div>
+  <div class="titre_container">
+    <h2>Gestion de Budget <span class="compteur"></span></h2>
+
+    <div class="header">
+      <div class="division_titre">
+        <div>
+          <h3>Budget</h3>
+          <span class="spans_1" id="montant_budget">120.000 CFA</span>
         </div>
       </div>
-  
-      <div class="tableaux">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Titre</th>
-              <th>Montant</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <!--
-          <tbody>
-           <tr>
-             <td>Nourriture</td>
-              <td>2000</td>
-              <td><button class="mdf_btn">Modifier</button>|<button class="sup_btn">Supprimer</button></td>
-            </tr>
-            <tr>
-              <td>Cafe</td>
-              <td>100</td>
-              <td><button class="mdf_btn">Modifier</button>|<button class="sup_btn">Supprimer</button></td>
-            </tr>
-          </tbody>
-          -->
-        </table>
+      <div class="division_titre">
+        <div>
+          <h3>Depense</h3>
+          <span class="spans_2" id="montant_revenu">100.000 CFA</span>
+        </div>
       </div>
+      <div class="division_titre">
+        <div>
+          <h3>Solde</h3>
+          <span class="spans">20.000 CFA</span>
+          <!--<h6>budget - depense = Solde</h6>--> 
+        </div>
       </div>
-
+    </div>
   </div>
+
+  <div class="containers">
+    <div class="tete_tableau">
+      <h4>Liste depense</h4>
+      <button id="ajouter_depense" type="button">Ajouter Depense</button>
+    </div>
+
+    <!--Le Model-->
+   <div class="modal" id="depense_modal">
+      <div class="model_content">
+        <span class="fermer">X</span>
+        <div class="form">
+          <form method="post">
+            <label for="name">Titre</label>
+            <input class="form_input" type="text" id="titre" name="titre" />
+
+            <label for="name">Montant</label>
+            <input class="form_input" type="number" id="montant" name="montant" />
+            <button type="submit" class="vld_btn">Valider</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="tableaux">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Titre</th>
+            <th>Montant</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <!--
+       <tbody>
+         <tr>
+           <td>Nourriture</td>
+            <td>2000</td>
+            <td><button class="mdf_btn">Modifier</button>|<button class="sup_btn">Supprimer</button></td>
+          </tr>
+          <tr>
+            <td>Cafe</td>
+            <td>100</td>
+           <td><button class="mdf_btn">Modifier</button>|<button class="sup_btn">Supprimer</button></td>
+          </tr>
+       </tbody>
+        -->
+     </table>
+    </div>
+  </div>
+
   
- 
  
   <script src="gestion_depenses.js"></script>
   
 
-
-  <div class="containers">
+  <div class="containersR">
    <div class="title-content">
       <h4>Liste revenus</h4>
       <button id="addRevenuModalButton" type="button"> Ajouter Revenu</button>
@@ -147,7 +144,7 @@
 
   </div>
 
-  <script src="gestion_revenus.js"></script>
+  <script src="gestion_revenus.js" defer></script>
 
 </body>
 

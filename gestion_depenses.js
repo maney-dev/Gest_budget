@@ -3,7 +3,7 @@ let initialDepenses = JSON.parse(localStorage.getItem('depenses')) || []
 
 const compteurElement = document.querySelector(".spans_1")
 const table = document.querySelector(".table")
-const tbody = document.createElement("tbody")
+const tbodys = document.createElement("tbody")
 
 // Fonction compteur
 function setCompteur(spans_1){
@@ -76,9 +76,9 @@ function createTable(){
             row.setAttribute("id", depenses[index].titre)
         }
        
-       tbody.appendChild(row)
+       tbodys.appendChild(row)
     }
-    table.appendChild(tbody)
+    table.appendChild(tbodys)
     document.body.appendChild(table)
 }
 
@@ -222,8 +222,8 @@ vld_btn.onclick = function(event){
 
     row.setAttribute("id", titre)
     row.setAttribute("id", montant)
-    tbody.appendChild(row)
-    table.appendChild(tbody)
+    tbodys.appendChild(row)
+    table.appendChild(tbodys)
     document.body.appendChild(table)
 
     //Vider les inputs apres ajout d'un nouvel element 
