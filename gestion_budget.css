@@ -48,9 +48,7 @@ h2{
    
 
 }
-/*.tableaux{
-    background-color: #d70909;
-}*/
+
 .tabled td , .tabled th{
     border: 1px solid grey;
    padding: 8px;
@@ -60,7 +58,6 @@ h2{
 }
 .tabled tr:hover{
     background-color: rgb(233, 233, 233);
-    position: relative;
     
 }
 .tabled th{
